@@ -600,15 +600,36 @@ body {
     }
 
     .hero {
-        padding: 40px 20px;
+        padding: 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .hero-left {
+        width: 100%;
+        flex: 1;
+    }
+
+    .hero-center {
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .hero-title {
-        font-size: 1.8em;
+        font-size: 1.5em;
+        margin-bottom: 12px;
     }
 
     .hero-subtitle {
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
 
     .hero-description {
@@ -616,34 +637,44 @@ body {
     }
 
     .hero-box {
-        min-width: 200px;
-        padding: 30px 20px;
+        min-width: 140px;
+        padding: 12px 14px;
     }
 
     .date-big {
-        font-size: 3em;
+        font-size: 2em;
+    }
+
+    .date-info div {
+        font-size: 0.6em;
+    }
+
+    .hero-badge {
+        height: 50px;
     }
 
     .tabs-wrapper {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
+        flex-wrap: wrap;
     }
 
     .tab-button {
-        width: 100%;
-        border-bottom: none;
-        border-right: 3px solid transparent;
+        padding: 6px 10px;
+        font-size: 0.65em;
+        border-bottom: 2px solid transparent;
+        border-right: none;
     }
 
     .tab-button:hover {
-        border-right-color: var(--text-dark);
-        border-bottom-color: transparent;
+        border-bottom-color: var(--text-light);
+        border-right-color: transparent;
     }
 
     .tab-button.active {
-        border-right-color: var(--text-dark);
-        border-bottom-color: transparent;
+        border-bottom-color: var(--text-light);
+        border-right-color: transparent;
     }
 
     .table-row {
@@ -682,7 +713,7 @@ body {
     }
 
     .team-badge {
-        height: 60px;
+        height: 50px;
     }
 
     .team-item {
@@ -691,14 +722,27 @@ body {
         gap: 8px;
     }
 
-    .team-captain {
-        min-width: 80px;
-        font-size: 0.75em;
+    .team-distance {
+        order: 1;
     }
 
-    .team-name {
+    .team-pretty-name {
+        order: 2;
+    }
+
+    .team-number {
+        order: 3;
+    }
+
+    .team-captain {
+        order: 4;
+        margin-left: 0;
+    }
+
+    .team-members {
+        order: 5;
         flex: 1 100%;
-        font-size: 0.85em;
+        margin-top: 6px;
     }
 }
 
